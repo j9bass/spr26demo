@@ -1,0 +1,195 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Grid Gallery Demo</title>
+	
+	
+<style>
+		
+/* gallery styling */
+	
+.gallery *,
+.gallery *::after,
+.gallery *::before {
+  margin: 0;
+  padding: 0;
+}
+	
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(8, 3em);
+  grid-gap: 0.75em; 
+}
+		
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block; 
+}
+
+.gallery-item-1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+
+  /** Alternative Syntax **/
+  /* grid-column: 1 / span 2;  */
+  /* grid-row: 1 / span 2; */
+}
+
+.gallery-item-2 {
+  grid-column-start: 3;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 3;
+	
+
+  /** Alternative Syntax **/
+  /* grid-column: 3 / span 2;  */
+  /* grid-row: 1 / span 2; */
+}
+		
+.gallery-item-3 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 1;
+  grid-row-end: 6;
+
+  /** Alternative Syntax **/
+  /* grid-column: 5 / span 4;
+  grid-row: 1 / span 5; */
+}
+		
+.gallery-item-4 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 3;
+  grid-row-end: 6;
+/* or for short [rs/cs/re/ce]: grid-area: 3 / 1 / 6 / 5; */
+	
+
+  /** Alternative Syntax **/
+  /* grid-column: 1 / span 4;  */
+  /* grid-row: 3 / span 3; */
+}
+
+.gallery-item-5 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 6;
+  grid-row-end: 9;
+
+  /** Alternative Syntax **/
+  /* grid-column: 1 / span 4; */
+  /* grid-row: 6 / span 3; */
+}
+
+.gallery-item-6 {
+  grid-column-start: 5;
+  grid-column-end: 9;
+  grid-row-start: 6;
+  grid-row-end: 9;
+
+  /** Alternative Syntax **/
+  /* grid-column: 5 / span 4; */
+  /* grid-row: 6 / span 3; */
+}		
+
+/* Other Page Styling */	
+	
+	
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 20px; 
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+  color: #333;
+  font-weight: 300;
+  line-height: 1.5em; 
+   background: #999;
+}
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+  padding: .5em 0 0;
+  background: #fff;
+}
+	
+main {
+	padding: 0 2em;
+	}
+		
+footer.site-footer {
+	background: #4488aa;
+	color: #fff;
+	margin-top: 3em;
+	padding: 1em 2em;
+	}	
+		
+footer.site-footer a {	
+	color: #fff;
+	}
+		
+footer.site-footer a:hover {	
+	color: #aaa;
+	text-decoration: none;
+	}	
+		
+</style>	
+	
+</head>
+
+<body>
+	
+<div class="wrapper">
+	
+	<main>
+	
+	<h1>Demo Gallery</h1>
+	
+	<div class="gallery">
+    	<figure class="gallery-item gallery-item-1">
+			<img src="images/arno-264.jpg" alt="A novel by Arno Schmidt" class="gallery-img">
+      	</figure>
+		<figure class="gallery-item gallery-item-2">
+			<img src="images/glasses-264.jpg" alt="A pair of green sunglasses" class="gallery-img">
+		</figure>
+		<figure class="gallery-item gallery-item-3">
+			<img src="images/pegs-264.jpg" alt="A pair of wooden pegs" class="gallery-img">
+		</figure>
+		<figure class="gallery-item gallery-item-4">
+			<img src="images/timetable-264.jpg" alt="An out-of-date timetable for New Jersey Transit's New Brunswick Train Station" class="gallery-img">
+		</figure>
+		<figure class="gallery-item gallery-item-5">
+			<img src="images/tribe-264.jpg" alt="A Tribe of Two Sheiks hummus container" class="gallery-img">
+		</figure>
+		<figure class="gallery-item gallery-item-6">
+			<img src="images/wristband-264.jpg" alt="A wristband" class="gallery-img">
+		</figure>
+	</div>
+	</main>	
+	
+<footer class="site-footer">
+	
+	<p>Code based on <a href="https://www.freecodecamp.org/news/how-to-create-an-image-gallery-with-css-grid-e0f0fd666a5c/" target="_blank">How to create an image gallery with CSS Grid</a></p>
+	<p>For additional information on working with CSS grid layouts, see	<a href="https://css-tricks.com/complete-guide-css-grid-layout/" target="_blank">A Complete Guide to CSS Grid Layout</a> and for in-depth guidance on working specifically with CSS grid areas, see Mojtaba Seydei's CSS Tricks article on the <a href="https://css-tricks.com/almanac/properties/g/grid-area/" target="_blank">grid-area property</a>.>/p>
+	<p>All images (c) 2026 Trashahoy!</p>
+	
+	</footer>	
+	
+</div>	
+		
+		
+		<!-- original code source: https://www.freecodecamp.org/news/how-to-create-an-image-gallery-with-css-grid-e0f0fd666a5c/ -->
+	
+	
+</body>
+</html>
